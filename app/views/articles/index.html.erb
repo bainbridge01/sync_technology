@@ -6,6 +6,7 @@
     <div class="card-body">
     <h5 class="card-title"><%= link_to article.title, article_path(article) %></h5>
     <p class="card-text"><%= article.description %></p>
+    <p><h6><%= pluralize(article.views, "view") %></h6></p>
     <%= link_to "show", article_path(article), class:"btn btn-primary"  %>
     <%= link_to "Edit", edit_article_path(article), class:"btn btn-secondary"  %>
     <%= link_to "Delete", article_path(article), class:"btn btn-danger"  %>

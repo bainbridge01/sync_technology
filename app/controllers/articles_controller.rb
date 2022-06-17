@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1 or /articles/1.json
   def show
+    @article.update(views: @article.views + 1)
   end
 
   # GET /articles/new
